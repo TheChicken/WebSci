@@ -1,0 +1,80 @@
+body {
+  background-color: #1dcaff;
+}
+
+#tweetFeed{
+  list-style: none;
+}
+
+#hashFeed{
+  border: 1px solid #000;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: zero;
+  max-height: 100px;
+  background-color: white;
+
+}
+
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+}
+
+.tweet{
+    border: 1px solid #000;
+    border-spacing: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    background-color: #c0deed;
+
+}
+
+.tweet img {
+    border-radius: 100px;
+    border: solid 2px white;
+
+}
+
+aside{
+  vertical-align: top;
+}
+blockquote.tweetFeed {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+  max-width: 468px;
+  
+}
+ 
+blockquote.tweetFeed p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+ 
+blockquote.tweetFeed a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+ 
+blockquote.tweetFeed a:hover,
+blockquote.tweetFeed a:focus {
+  text-decoration: underline;
+}
+

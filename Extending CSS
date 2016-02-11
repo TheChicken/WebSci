@@ -1,0 +1,54 @@
+Extending CSS
+
+creating variables
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body{
+	font: 100% $font-stack;
+	color: $primary-color;
+}
+
+//start to nest 
+nav{
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {display:inline-block}
+
+	a{
+		display:block;
+		text-decoration: none;
+	}
+}
+
+//can extend
+.message{
+	...
+}
+.success{
+	@extend.message;
+	border-color:green;
+}
+
+//Maybe indlude {LESS} first
+
+Front End Frameworks
+	Bootstrap / Foundation (from Zurb)
+	- predefined layouts and setups and methodology for use in creating styles for your output
+
+"jsonp" - JSON with padding 
+	//wen web apis have cross domain issues
+	//so we will call a web service API 
+	dataType: "jsonp";
+	url: "https://graph.facebook.com/4?fields=id.name";
+
+Use HTML Geolocation API to retrieve current location from browser
+Pass location to the API
+Populate the weather data (current and forecast) in the browser
+	- use Bootstrap to display 
+	
