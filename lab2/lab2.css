@@ -1,0 +1,47 @@
+
+.container{
+	margin-left: 20px;
+	margin-top: 40px;
+
+}
+.panel { 
+	height: 200px; 
+	margin-top: 12px;
+	font-size: 16px;
+	font-style: bold;
+	background-color: #264d73;
+	opacity: 0.9;
+	color: white;
+}
+
+.panel .todayDate{
+	margin-left: 15px;
+	margin-right: 30px;
+	font-style: bold;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
+#forecasts{
+	background-color: #264d73;
+	opacity: 0.95;
+	color: white;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+
+.weatherIcon{
+	margin-right: 7px;
+}
+
+h3{
+	margin-left: 12px;
+}
+
+body{
+	background-image: url("background.jpg");
+	background-position: center;
+}
+
