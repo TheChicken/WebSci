@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="lab4.js"></script>
+<link rel="stylesheet" type="text/css" href="lab4.css">
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://twitter.com/?lang=en">
+        <img alt="Brand" src="twitter.png" height="40" width="40"/>
+      </a>
+      <a class="navbar-brand" href="">
+        <img alt="Brand" src="MyFace.jpg" height="40" width="40"/>
+      </a>
+    </div><h3>Chelsea Valente - Lab 4</h3>
+  </div>
+</nav>
+
+<div ng-app="twitterApp" ng-controller="TwitterController">
+
+  <label for = "input">Query :</label> 
+  <input id = "input" type="text" ng-model="query" class="form-control">
+  <button ng-click="getTweets()">{{ button }}</button>
+
+  <div ng-repeat="tweet in tweets">
+  	
+	<backquote id="tweetFeed">
+		<div class="col-xs-12">
+		 	<div id ="image-cropper" class="col-xs-2">
+		  		<img ng-src="{{ tweet.user.profile_image_url}}">
+		  	</div>
+		  	<div class="col-xs-10">
+		  		<p class = "message">{{ tweet.text }}</p>
+		  	</div>
+		 </div> 
+  	</backquote>
+
+  </div>
+
+</div>
+</body>
+</html>

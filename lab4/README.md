@@ -1,0 +1,4 @@
+Chelsea Valente
+README - Lab 4
+
+So, angular is weird! But I like how you can speak directly to the html and it does a LOT of work for you. I had to get used to the importing of data, I didnt really understand the conroller and model but I really like how flexible it is. The more we work with MVCs I think I will understand it better. I did have some trouble with the bootstrapping and the column widths and will have to see if angularjs has a different interaction with bootstrap tags and see what I can do better this time. It was nice that there is much much less code this time and it seems much more efficient! 
