@@ -21,17 +21,13 @@ app.get('/', function(req, res, next){
 
 app.get('/queryDB', function(req, res){
 
-
-
-	;
-
 	var qryString = req.query.theQuery;
 	console.log("Query to " + endpoint);
 
 	if(req.query.actor!==undefined){
 		qryString = qryString + ' && regex(?actor_name, "' + req.query.actor +'", "i")';
 	}
-	if(req.query.contry!==undefined){
+	if(req.query.country!==undefined){
 		qryString = qryString + ' && regex(?film_country, "' + req.query.country +'" "i")';
 	}
 	if(req.query.director!==undefined){
