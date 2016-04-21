@@ -1,0 +1,39 @@
+@media screen and (max-width: 680px){
+  body {
+    background-color: black;
+    margin-left: 20px;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 680px){
+  body {
+    background-image: url("semantic.jpg");  
+    opacity: .9;                  
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #66ffff;
+  }
+}
+
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+}
+
+#movieBlock{
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#movieInfo{
+  margin-left: 13px;
+  margin-bottom: 5px;
+}
+
+#firstRow{
+  color: gray;
+}
