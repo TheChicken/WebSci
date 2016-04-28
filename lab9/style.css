@@ -1,0 +1,87 @@
+@media screen and (max-width: 680px){
+  body {
+    background-color: black;
+
+    color:white;
+  }
+}
+
+@media screen and (min-width: 680px){
+  body {
+    background-color: #66c2ff;
+  
+    
+  }
+}
+
+#main{
+  margin-left: 10px
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    opacity: 0.9;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.navbar-brand img{
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+}
+
+.navbar h3{
+  color: white;
+}
+#tweetFeed {
+  box-shadow:  5px 5px #808080;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  opacity: .8;
+}
+
+blockquote{
+  font-size: 14px;
+}
+#userImage{
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+}
+#userName{
+  margin-left: 5px;
+}
+
+h6{
+  color:#a6a6a6;
+}
+blockquote a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+ 
+blockquote a:hover,
+blockquote a:focus {
+  text-decoration: underline;
+}
+
+.jumbotron {
+  margin-top: 10px;
+  opacity: .9;
+
+}
+

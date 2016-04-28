@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="lab9.js"></script>
+<script src="/controllers/WelcomeCtrl.js"></script>
+<script src="/controllers/InstallCtrl.js"></script>
+<script src="/controllers/ExportCtrl.js"></script>
+<script src="/controllers/LoadCtrl.js"></script>
+<script src="/controllers/DatabaseCtrl.js"></script>
+<script src="/controllers/ReadCtrl.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+
+<div id="main" ng-app="mainApp">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://twitter.com/?lang=en">
+          <img alt="Brand" src="twitter.png" height="40" width="40"/>
+        </a>
+        <a class="navbar-brand" href="">
+          <img alt="Brand" src="MyFace.jpg" height="40" width="40"/>
+        </a>
+      </div><h3>Chelsea Valente - Lab 9</h3>
+       <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#/pages/install">Install</a></li>
+          <li><a href="#/pages/load">Explore</a></li>
+          <li><a href="#/pages/database">Database</a></li>
+          <li><a href="#/pages/read">Read</a></li>
+          <li><a href="#/pages/export">Export</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div id="content" ng-view></div>
+
+
+
+</div>
+   <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-center"> "Putting It All Together" </p>
+    </div>
+  </footer>
+</body>
+</html>
+
+  

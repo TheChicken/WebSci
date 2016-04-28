@@ -1,0 +1,61 @@
+<div id="databaseContent">
+  <h3>Database Functions</h3>
+  <p>To create a datbase you can enter a query and/or a collection name and then press build. If you do not enter a collection name it will default to a untitled collection.</p>
+  <br>
+
+  <div class="col-xs-10 col-xs-offset-1 container-fluid">
+    <div class="row">
+        <div class="col-xs-1 text-left"><label for = "input">Query :</label></div>
+        <div class="col-xs-3 ">
+          <input id = "input" type="text" ng-model="query" placeholder="e.g. Dogs" class="form-control">
+        </div>
+        <div class="col-xs-1">
+          <input id="count" type="text" ng-init="count='10'" ng-model="count" class="form-control">
+        </div>
+    
+
+        <div class="col-xs-2 text-right">
+          <label for = "input">Collection Name:</label>
+        </div>
+        <div class="col-xs-3 text-left">
+          <input id = "input" type="text" ng-model="dbName" placeholder="e.g. DogTweets" class="form-control">
+        </div>
+        
+          <div class="col-xs-1">
+            <button type="button" class="btn btn-primary" ng-click="buildTweets()">{{buildButton}}</button>
+      </div>
+    </div>
+  </div>
+    <br>
+<br>
+<hr>
+
+
+  <div class = "col-xs-6 col-xs-offset-3">
+    <div class="alert alert-success" ng-show="showSuccessAlert">
+      <button type="button" class="close" data-ng-click="switchBool('showSuccessAlert')" >×</button>
+      <strong>{{successStatus}}</strong> {{successTextAlert}}
+    </div>
+  </div>
+  <div class = "col-xs-6 col-xs-offset-3">
+    <div class="alert alert-danger" ng-show="showWarningAlert">
+      <button type="button" class="close" data-ng-click="switchBool('showWarningAlert')" >×</button>
+      <strong>{{warningStatus}}</strong> {{warningTextAlert}}
+    </div>
+  </div>
+
+  <div ng-repeat="tweet in tweets">
+  <div class="col-xs-6 col-xs-offset-3" id="tweetFeed">
+    <div class="col-xs-2">
+      <img ng-src="{{ tweet.user.profile_image_url}}" id="userImage">
+    </div>
+    <div class="col-xs-10">
+      <p>
+        <strong>{{tweet.user.screen_name}}</strong><small id="userName">{{tweet.user.name}}</small><br>
+        <p class = "message">{{tweet.text}}</p>
+        <h6> -{{tweet.place.full_name}}</h6>
+      </p>
+      </div>
+    </div> 
+  </div>
+</div>

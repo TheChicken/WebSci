@@ -1,0 +1,80 @@
+<div id="exportContent">
+      <h3>Export</h3>
+      <p>To export a specific subset of tweets from the database, enter a query in the input field and select the number you would like to collect. Choose the export type from the drop down and click!</p>
+  <div class="col-xs-10 col-xs-offset-1 container-fluid"> 
+    <div class="row">
+      <div class="col-xs-2 text-right"><label for = "input">Query :</label></div>
+      <div class="col-xs-4 ">
+        <input id = "input" type="text" ng-model="query" placeholder="e.g. Dogs" class="form-control">
+      </div>
+      <div class="col-xs-2">
+        <input id="count" type="text" ng-init="count='10'" ng-model="count" class="form-control">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+       <div class="col-xs-2 text-right"><label for = "input">Collection :</label></div>
+        <div class="col-xs-5 ">
+          <input id = "input" type="text" ng-model="dbName" placeholder="e.g. DogTweets" class="form-control">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-2 text-right"><label for = "input">File Name :</label></div>
+      <div class="col-xs-4 ">
+        <input id = "input" type="text" ng-model="fileName" placeholder="e.g. Dog_Tweets_xml" class="form-control">
+      </div>
+       <div class = "col-xs-1">
+          <select name="repeatSelect" id="repeatSelect" ng-model="data.repeatSelect"><option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option></select>
+        </div>
+      <div class = "col-xs-1">
+        <button type="button" class="btn btn-warning" ng-click="exportTweets()">{{exButton}}</button> 
+      </div>
+   </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+
+  <div class = "col-xs-6 col-xs-offset-3">
+    <div class="alert alert-warning" ng-show="showWarningAlert">
+      <button type="button" class="close" data-ng-click="switchBool('showWarningAlert')" >×</button>
+      <strong>{{warningStatus}}</strong> {{warningTextAlert}}
+    </div>
+  </div>
+  <div class = "col-xs-6 col-xs-offset-3">
+    <div class="alert alert-danger" ng-show="showErrorAlert">
+      <button type="button" class="close" data-ng-click="switchBool('showErrorAlert')" >×</button>
+      <strong>{{errorStatus}}</strong> {{errorTextAlert}}
+    </div>
+  </div>
+  <div class = "col-xs-6 col-xs-offset-3">
+    <div class="alert alert-success" ng-show="showSuccessAlert">
+      <button type="button" class="close" data-ng-click="switchBool('showSuccessAlert')" >×</button>
+      <strong>{{successStatus}}</strong> {{successTextAlert}}
+    </div>
+  </div>
+  <div ng-repeat="tweet in tweets">
+  <div class="col-xs-6 col-xs-offset-3" id="tweetFeed">
+    <div class="col-xs-2">
+      <img ng-src="{{ tweet.user.profile_image_url}}" id="userImage">
+    </div>
+    <div class="col-xs-10">
+      <p>
+        <strong>{{tweet.user.screen_name}}</strong><small id="userName">{{tweet.user.name}}</small><br>
+        <p class = "message">{{tweet.text}}</p>
+        <h6>- {{tweet.place.full_name}}</h6>
+      </p>
+      </div>
+    </div> 
+  </div>
+
+</div>
+
